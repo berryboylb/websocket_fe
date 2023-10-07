@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import ChatProvider from "../../Context/ChatProvider";
 import { Outlet } from "react-router-dom";
 
