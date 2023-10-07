@@ -8,7 +8,6 @@ function App() {
   return (
     <Suspense fallback={<Spinner />}>
       <div className="App">
-
         <RouterProvider router={router} />
       </div>
     </Suspense>

@@ -1,9 +1,18 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { Container, Box, Text } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import Login from "../components/Auth/Login";
 import Signup from "../components/Auth/Signup";
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const userInfoString = localStorage.getItem("user");
+    const user = userInfoString ? JSON.parse(userInfoString) : null;
+
+    if (user) navigate("/chats");
+  }, [navigate]);
   return (
     <Suspense>
       <Container maxW="container.sm" centerContent>
@@ -37,10 +46,10 @@ export default function Home() {
 
             <TabPanels>
               <TabPanel>
-                <Login/>
+                <Login />
               </TabPanel>
               <TabPanel>
-                <Signup/>
+                <Signup />
               </TabPanel>
               =
             </TabPanels>

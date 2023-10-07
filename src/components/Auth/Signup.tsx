@@ -5,6 +5,7 @@ import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { baseUrl } from "../../constant";
 const Signup = () => {
   const navigate = useNavigate();
   const [name, setName] = React.useState("");
@@ -92,7 +93,7 @@ const Signup = () => {
         },
       };
       const response = await axios.post(
-        "http://localhost:5000/api/user",
+        `${baseUrl}/api/user`,
         { name, email, password, pic },
         config
       );
