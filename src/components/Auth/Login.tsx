@@ -97,7 +97,7 @@ const Login = () => {
       >
         Login
       </Button>
-      <Button
+      {/* <Button
         onClick={() => {
           setEmail("guest@examplem");
           setPassword("123456");
@@ -107,7 +107,7 @@ const Login = () => {
         style={{ marginTop: 15 }}
       >
         Get Guest Credentials
-      </Button>
+      </Button> */}
     </VStack>
   );
 };
