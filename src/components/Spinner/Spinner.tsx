@@ -1,4 +1,3 @@
-import React from "react";
 import { Box } from "@chakra-ui/react";
 // import { css } from "@emotion/react";
 import { ClipLoader } from "react-spinners";
